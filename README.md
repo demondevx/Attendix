@@ -211,7 +211,42 @@ We're here to help! Reach out through any of these channels:
 - **Check Statistics** - Use `/attendance my-report` to track your progress
 - **Set Reminders** - Leave reminders help staff remember their return dates
 
+## 🛡️ Strike & Discipline System (New)
+
+The bot includes a fully automated strike management system to handle staff discipline fairly and consistently.
+
+### Strike Commands
+
+| Command | Description | Permissions |
+| :--- | :--- | :--- |
+| `/strike setup` | Interactive 5-step setup for channels, roles, and penalties. | Admin Only |
+| `/strike issue` | Issue strikes to a user with a reason and quantity. | Admin/Staff |
+| `/strike status` | View a detailed report of a user's active strikes. | Admin/Staff |
+| `/strike remove` | Remove a specific number of strikes from a user. | Admin/Staff |
+| `/strike reset` | Clear all strikes and reset a user's status to zero. | Admin/Staff |
+| `/strike leaderboard` | View the top 10 members with active strikes. | Admin/Staff |
+
+### Key Features
+- **Automated Penalties**: Automatically triggers **Kicks** or **Demotions** (highest staff role removal) when a user reaches the strike threshold.
+- **Auto-Reset**: Strikes are automatically cleared to zero once a penalty action is performed.
+- **Strike Expiration**: Strikes automatically expire and are purged from the database after a configurable number of days (1, 3, 5, or 7 days).
+- **Professional Analytics**: Detailed embeds showing who issued each strike, why, and when they will expire.
+- **Hierarchy Awareness**: For demotions, the bot intelligently identifies and removes only the highest-ranking staff role configured in your setup.
+
 ---
 
+## 📞 Contact Us
+
+If you have questions, concerns, or requests regarding this Privacy Policy or your data:
+
+- **Developer Contact:** [DemonDev on Discord](https://discord.com/users/555652788592443392)
+- **Support Server:** [Join our Support Server](https://discord.gg/s2DGG38cmK)
+- **Email:** [support@demondev.org](mailto:support@demondev.org)
+- **GitHub Issues:** Open an issue on our repository
+- **Server Administrator:** Contact your Discord server administrator for data-related requests
+
+We will respond to your inquiry within a reasonable timeframe.
+
+---
 
 **Ready to bring professional attendance management to your Discord server? Let's get started! 🚀**
