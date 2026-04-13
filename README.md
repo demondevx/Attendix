@@ -33,6 +33,13 @@
 - **DM Notifications** - Instant updates on request status
 - **Automatic Reminders** - Get notified 3 hours before leave ends
 
+### 🛡️ Automated Strike System
+- **Strike Management** - Issue strikes with reasons and custom quantities
+- **Automated Penalties** - Automatically triggers **Kicks** or **Demotions** when thresholds are reached
+- **Auto-Reset** - Strikes are automatically cleared after a penalty action is taken
+- **Auto-Expiration** - Strikes automatically expire after a set time (1-7 days)
+- **Strike Reports** - Detailed embeds for checking individual standing and the server leaderboard
+
 ### 🎯 **Interactive Portals**
 - **Custom Attendance Portals** - Create beautiful embeds with Start/End buttons
 - **Button Integration** - Staff can manage attendance with one click
@@ -54,10 +61,15 @@
    ```
    /attendance report-channel #attendance-reports
    ```
-4. **Configure Leave Logs Channel**
+6. **Configure Leave Logs Channel**
    ```
    /leave logs #leave-requests
    ```
+7. **Configure Strike System**
+   ```
+   /strike setup
+   ```
+   Follow the 5-step interactive setup to configure announcements, thresholds, and actions.
 
 #### Optional: Create Attendance Portal
 ```
@@ -99,6 +111,18 @@ Shows if you have an active shift and current duration.
 ```
 See your total shifts, hours worked, VC time, and message counts.
 
+#### Checking Strike Status
+```
+/strike status
+```
+Detailed report of your active strikes and expiration dates.
+
+#### Viewing Leaderboard
+```
+/strike leaderboard
+```
+Top 10 users with active strikes in the server.
+
 #### Requesting Leave
 ```
 /leave request
@@ -121,6 +145,8 @@ Your request will be sent to admins for approval. You'll receive a DM with their
 | `/attendance end` | End your current shift and generate report |
 | `/attendance status` | Check your current attendance status |
 | `/attendance my-report` | View your personal statistics |
+| `/strike status` | View your current strike standing |
+| `/strike leaderboard` | View the top 10 users with strikes |
 | `/leave request` | Submit a leave request |
 
 ### **Admin Commands**
@@ -134,6 +160,10 @@ Your request will be sent to admins for approval. You'll receive a DM with their
 | `/blacklist add <channel>` | Exclude channel from tracking |
 | `/blacklist remove <channel>` | Remove channel from blacklist |
 | `/blacklist list` | View all blacklisted channels |
+| `/strike setup` | Configure channels, limits, and penalties |
+| `/strike issue <user> <qty> <reason>` | Issue strikes to a user |
+| `/strike remove <user> <qty>` | Remove strikes from a user |
+| `/strike reset <user>` | Reset a user's strikes to zero |
 
 ---
 
@@ -210,29 +240,6 @@ We're here to help! Reach out through any of these channels:
 - **Blacklist Spam Channels** - Exclude bot channels to keep reports clean
 - **Check Statistics** - Use `/attendance my-report` to track your progress
 - **Set Reminders** - Leave reminders help staff remember their return dates
-
-## 🛡️ Strike & Discipline System (New)
-
-The bot includes a fully automated strike management system to handle staff discipline fairly and consistently.
-
-### Strike Commands
-
-| Command | Description | Permissions |
-| :--- | :--- | :--- |
-| `/strike setup` | Interactive 5-step setup for channels, roles, and penalties. | Admin Only |
-| `/strike issue` | Issue strikes to a user with a reason and quantity. | Admin/Staff |
-| `/strike status` | View a detailed report of a user's active strikes. | Admin/Staff |
-| `/strike remove` | Remove a specific number of strikes from a user. | Admin/Staff |
-| `/strike reset` | Clear all strikes and reset a user's status to zero. | Admin/Staff |
-| `/strike leaderboard` | View the top 10 members with active strikes. | Admin/Staff |
-
-### Key Features
-- **Automated Penalties**: Automatically triggers **Kicks** or **Demotions** (highest staff role removal) when a user reaches the strike threshold.
-- **Auto-Reset**: Strikes are automatically cleared to zero once a penalty action is performed.
-- **Strike Expiration**: Strikes automatically expire and are purged from the database after a configurable number of days (1, 3, 5, or 7 days).
-- **Professional Analytics**: Detailed embeds showing who issued each strike, why, and when they will expire.
-- **Hierarchy Awareness**: For demotions, the bot intelligently identifies and removes only the highest-ranking staff role configured in your setup.
-
 ---
 
 ## 📞 Contact Us
